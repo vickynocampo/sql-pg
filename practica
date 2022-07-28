@@ -1,0 +1,5 @@
+SELECT title, CONCAT(actors.first_name, " ", actors.last_name)
+FROM movies
+INNER JOIN actor_movie ON movies.id = actor_movie.movie_id
+INNER JOIN actors ON actors.id = actor_movie.actor_id
+WHERE movies.title LIKE "%guerra%"
